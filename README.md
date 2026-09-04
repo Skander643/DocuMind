@@ -2,7 +2,8 @@
 
 Multilingual RAG assistant for **Tunisian labor law** PDFs. Answers are grounded in retrieved pages, reranked, and cited. Weak retrieval refuses instead of hallucinating.
 
-> Portfolio project — DS/AI engineering. Phase 5: Docker Compose + API key + rate limit.
+> Portfolio project — DS/AI engineering. Phase 5: Docker Compose + API key + rate limit.  
+> Source: [github.com/Skander643/DocuMind](https://github.com/Skander643/DocuMind) · UI: [documind-orpin.vercel.app](https://documind-orpin.vercel.app)
 
 ## Pipeline
 
@@ -142,9 +143,10 @@ python -m app.eval --limit 3       # smoke
 
 ## Hosting
 
-**GitHub** is the source of truth. **Vercel** can host the React UI (`frontend/`). The RAG API (PyTorch, BGE-M3, Chroma) does **not** fit Vercel serverless — use Docker Compose for a working chat demo.
+- **GitHub:** [https://github.com/Skander643/DocuMind](https://github.com/Skander643/DocuMind)
+- **Vercel UI:** [https://documind-orpin.vercel.app](https://documind-orpin.vercel.app)
 
-To publish the UI: import this repo in Vercel, set **Root Directory** to `frontend`, framework Vite. Chat stays local until the API has a public URL (`VITE_API_URL`).
+Vercel hosts the React UI only (`frontend/`, Root Directory `frontend`). The RAG API (PyTorch, BGE-M3, Chroma) does **not** fit Vercel serverless — use Docker Compose for a working chat demo. Chat on the live UI stays local until the API has a public URL (`VITE_API_URL`).
 
 ## Working with Cursor
 
