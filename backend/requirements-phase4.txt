@@ -1,0 +1,6 @@
+# Phase 4: RAGAS-style scoring (includes Phase 2)
+-r requirements-phase2.txt
+# Judge calls use existing OpenRouter/Gemini/httpx.
+# Optional extra (not required to run python -m app.eval):
+# ragas>=0.2.0
+# datasets>=3.0.0

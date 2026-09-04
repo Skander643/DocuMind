@@ -1,0 +1,46 @@
+# Secrets and local env
+.env
+.env.local
+*.pem
+
+# Python
+backend/.venv/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Data (PDFs and vector store are local)
+data/raw/*.pdf
+data/chroma/
+data/processed/
+eval/results/*.csv
+eval/results/*.json
+
+# Models / caches
+.cache/
+*.bin
+*.pt
+*.onnx
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Vercel
+.vercel
+frontend/.vercel

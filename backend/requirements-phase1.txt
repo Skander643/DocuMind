@@ -1,0 +1,9 @@
+# Phase 1: ingest into Chroma (includes Phase 0 API deps)
+-r requirements-phase0.txt
+pymupdf>=1.24.0
+chromadb>=0.5.20
+sentence-transformers>=3.3.0
+# Install CPU torch first if you do not need CUDA:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.4.0
+langdetect>=1.0.9

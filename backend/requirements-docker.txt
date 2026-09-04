@@ -1,0 +1,7 @@
+# Runtime image for Compose (Phase 5). CPU torch is installed in the Dockerfile.
+-r requirements-phase0.txt
+pymupdf>=1.24.0
+chromadb>=0.5.20
+sentence-transformers>=3.3.0
+langdetect>=1.0.9
+google-generativeai>=0.8.0

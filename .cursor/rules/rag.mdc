@@ -1,0 +1,19 @@
+---
+description: Ingest, retrieval, rerank, and generation constraints
+globs: backend/app/{rag,ingest,eval,db}/**/*.py
+alwaysApply: false
+---
+
+# RAG pipeline
+
+Order is fixed: retrieve top-10 → CrossEncoder rerank → confidence gate → generate.
+
+- Embeddings: `BAAI/bge-m3` (query and passages must use the same model).
+- Reranker: `BAAI/bge-reranker-base`.
+- Chunks: page-aware; persist `doc_id`, `filename`, `page`, `text`, `language`, `chunk_index`.
+- Baseline chunking: 512 tokens, 64 overlap (`docs/decisions.md`).
+- If best rerank score < `RERANK_MIN_SCORE`, skip the LLM and return low confidence.
+- LLM prompt: answer only from context; match user language when possible (FR/AR/EN).
+- Eval belongs in `backend/app/eval/`, not inside `pipeline.py`.
+
+Do not replace this two-stage retrieve+rerank with “just k=5 from Chroma.”

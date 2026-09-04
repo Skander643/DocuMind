@@ -1,0 +1,14 @@
+---
+description: React + Vite + TypeScript UI conventions
+globs: frontend/**/*.{ts,tsx,css}
+alwaysApply: false
+---
+
+# Frontend
+
+- React function components + TypeScript. No `any`.
+- Vite only. Do not add Next.js, Redux, or a CSS framework unless asked.
+- Chat messages render `answer` plus citation cards: filename, page, excerpt.
+- Show a visible “low confidence” state when `confidence === "low"`.
+- API types live in `frontend/src/types.ts` and must match FastAPI schemas.
+- Keep secrets off the client. Only `VITE_API_URL` (and optional public API key header later).

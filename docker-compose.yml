@@ -1,0 +1,47 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      # Override with API_HOST_PORT in .env if host 8000 is already taken.
+      - "${API_HOST_PORT:-8000}:8000"
+    env_file:
+      - .env
+    environment:
+      APP_ENV: prod
+      DATA_RAW_DIR: /src/data/raw
+      CHROMA_PERSIST_DIR: /src/data/chroma
+      HF_HOME: /root/.cache/huggingface
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./data:/src/data
+      - ./eval:/src/eval
+      - ${HOME}/.cache/huggingface:/root/.cache/huggingface
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      # Override with FRONTEND_HOST_PORT in .env if host 5173 is already taken.
+      - "${FRONTEND_HOST_PORT:-5173}:80"
+    environment:
+      API_KEY: ${API_KEY:-}
+    depends_on:
+      api:
+        condition: service_healthy

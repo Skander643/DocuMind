@@ -1,0 +1,22 @@
+---
+description: DocuMind project-wide constraints for every session
+alwaysApply: true
+---
+
+# DocuMind
+
+RAG document Q&A over Tunisian labor-law PDFs. Read `prd.md` and `docs/architecture.md` before changing pipeline behavior.
+
+## Frozen stack
+
+FastAPI, PyMuPDF, ChromaDB, sentence-transformers, `BAAI/bge-m3`, `BAAI/bge-reranker-base`, Gemini Flash + Ollama fallback, React + Vite + TypeScript, Docker Compose, RAGAS.
+
+Do not add LangChain/LlamaIndex as the orchestrator. Splitters/PDF helpers only if needed.
+
+## Agent behavior
+
+- One module per change. Do not scaffold features from a later phase.
+- Never invent legal answers. Low retrieval score → refusal.
+- No new dependencies without updating `prd.md` and the matching requirements/package file.
+- No secrets in source. Chunk metadata must include `filename` and `page`.
+- After RAG config changes, add a row to `docs/decisions.md`.

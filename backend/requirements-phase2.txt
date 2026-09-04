@@ -1,0 +1,3 @@
+# Phase 2: retrieve → rerank → generate (includes Phase 1)
+-r requirements-phase1.txt
+google-generativeai>=0.8.0

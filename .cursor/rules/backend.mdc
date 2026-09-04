@@ -1,0 +1,27 @@
+---
+description: FastAPI backend conventions
+globs: backend/**/*.py
+alwaysApply: false
+---
+
+# Backend
+
+- Python 3.12, type hints, Ruff-friendly PEP 8.
+- Settings via `pydantic-settings` and `.env` (`backend/app/config.py`).
+- Routers in `backend/app/api/` are HTTP adapters only. Business logic lives in `ingest/`, `rag/`, `eval/`.
+- Raise `HTTPException` with clear status codes. Do not return raw stack traces.
+- Log query id, latency, and citation count — not full document text at INFO.
+- Tests in `backend/tests/`. Mock Chroma, embedders, and LLM. No network in unit tests.
+
+```python
+# ❌ BAD — embedding inside a router
+@router.post("/chat")
+def chat(q: ChatRequest):
+    vec = model.encode(q.query)
+    ...
+
+# ✅ GOOD
+@router.post("/chat")
+def chat(q: ChatRequest, pipeline: Pipeline = Depends(get_pipeline)):
+    return pipeline.ask(q.query)
+```
