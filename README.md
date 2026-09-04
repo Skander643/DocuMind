@@ -145,9 +145,9 @@ python -m app.eval --limit 3       # smoke
 
 - **GitHub:** [https://github.com/Skander643/DocuMind](https://github.com/Skander643/DocuMind)
 - **Vercel UI:** [https://documind-orpin.vercel.app](https://documind-orpin.vercel.app)
-- **API:** Fly.io (`documind-skander`) — set `VITE_API_URL` on Vercel to that origin.
+- **API:** [https://api-production-4d57.up.railway.app](https://api-production-4d57.up.railway.app) (Railway). `VITE_API_URL` on Vercel points here.
 
-Vercel hosts the React UI (`frontend/`). The RAG API (PyTorch, BGE-M3, Chroma) runs as a 4 GB Fly machine with a volume for the Hugging Face cache. Public chat is rate-limited; document upload/delete is disabled unless `API_KEY` is set. Local Docker Compose remains the full laptop demo.
+Vercel hosts the React UI (`frontend/`). The RAG API (PyTorch, BGE-M3, Chroma) runs on Railway. Public chat is rate-limited; document upload/delete is disabled unless `API_KEY` is set. Local Docker Compose remains the full laptop demo. `fly.toml` is there if you switch hosts after adding a Fly.io payment method.
 
 ## Working with Cursor
 

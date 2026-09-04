@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import math
 from collections.abc import Callable, Sequence
+from pathlib import Path
 from functools import lru_cache
 
 from app.config import settings
@@ -15,7 +16,6 @@ _IGNORE = (
     "*.onnx_data",
     "openvino/**",
     "*.ot",
-    "pytorch_model.bin",
     "pytorch_model.bin.index.json",
     "flax_model.msgpack",
     "tf_model.h5",
@@ -58,6 +58,15 @@ def get_cross_encoder():
         repo_id=settings.reranker_model,
         ignore_patterns=list(_IGNORE),
     )
+    names = {p.name for p in Path(path).glob("*")}
+    if not any(
+        name == "pytorch_model.bin" or name.endswith(".safetensors") for name in names
+    ):
+        path = snapshot_download(
+            repo_id=settings.reranker_model,
+            ignore_patterns=list(_IGNORE),
+            force_download=True,
+        )
     return CrossEncoder(path)
 
 
