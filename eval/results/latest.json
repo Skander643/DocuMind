@@ -1,0 +1,2173 @@
+{
+  "created_at": "2026-09-03T10:52:39+00:00",
+  "n_questions": 50,
+  "config": {
+    "retrieve_k": 10,
+    "rerank_top_n": 5,
+    "rerank_min_score": 0.25,
+    "embedding_model": "BAAI/bge-m3",
+    "reranker_model": "BAAI/bge-reranker-base",
+    "llm": "google/gemini-2.5-flash"
+  },
+  "metrics": {
+    "faithfulness": 0.9787,
+    "answer_relevancy": 0.703,
+    "context_precision": 0.9734,
+    "context_recall": 0.9915,
+    "refuse_accuracy": 1.0,
+    "n_ragas": 47,
+    "n_refuse": 3
+  },
+  "items": [
+    {
+      "id": "q001",
+      "question": "Quelle est la durée du congé annuel payé pour un travailleur occupé au moins un mois chez le même employeur ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:76",
+      "expect_refuse": false,
+      "answer": "Tout travailleur justifiant d'au moins un mois de travail effectif chez le même employeur a droit à un congé d'un jour par mois de travail, sans que la durée totale du congé exigible ne puisse excéder quinze jours, comprenant douze jours ouvrables.",
+      "confidence": "high",
+      "latency_ms": 16309,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.7293
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.7266
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.7
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 83,
+          "score": 0.6713
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 84,
+          "score": 0.663
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6967,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q002",
+      "question": "Quelle est la durée du congé annuel pour un salarié de moins de dix-huit ans au 31 décembre ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:76",
+      "expect_refuse": false,
+      "answer": "La durée du congé annuel pour un salarié de moins de dix-huit ans au 31 décembre de chaque année est de deux jours par mois de travail, sans que la durée totale du congé exigible ne puisse excéder une période de trente jours, dont vingt-quatre jours ouvrables.",
+      "confidence": "high",
+      "latency_ms": 6003,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.729
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.7208
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 83,
+          "score": 0.5666
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5486
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 78,
+          "score": 0.5348
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.762,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q003",
+      "question": "Quelle est la durée du congé annuel pour un salarié âgé de dix-huit à vingt ans au 31 décembre ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:76",
+      "expect_refuse": false,
+      "answer": "La durée du congé annuel pour un salarié âgé de dix-huit à vingt ans au 31 décembre de chaque année est d'un jour et demi par mois de travail, sans que la durée totale du congé exigible ne puisse excéder vingt-deux jours, dont dix-huit jours ouvrables [1].",
+      "confidence": "high",
+      "latency_ms": 5891,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.727
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.7026
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 83,
+          "score": 0.5637
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 78,
+          "score": 0.5231
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5176
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7737,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q004",
+      "question": "Pour le congé annuel, à quoi équivaut un mois de travail effectif ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:76",
+      "expect_refuse": false,
+      "answer": "Un mois de travail effectif équivaut à vingt-six jours ouvrables pour la détermination de la durée du congé annuel.",
+      "confidence": "high",
+      "latency_ms": 5320,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.7179
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.5226
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 66,
+          "score": 0.5104
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5036
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 83,
+          "score": 0.5035
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8115,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q005",
+      "question": "Comment le congé annuel augmente-t-il avec l'ancienneté chez le même employeur ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:77",
+      "expect_refuse": false,
+      "answer": "La durée du congé annuel est augmentée d'un jour ouvrable par période entière, continue ou non, de cinq ans de services chez le même employeur. Cette augmentation ne peut pas porter la durée totale du congé à plus de dix-huit jours ouvrables et ne peut pas se cumuler avec les augmentations résultant des conventions collectives, des contrats individuels de travail ou des usages. (Article 115)",
+      "confidence": "high",
+      "latency_ms": 5736,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.6961
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.6316
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.5341
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 78,
+          "score": 0.5118
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 81,
+          "score": 0.5071
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6983,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q006",
+      "question": "À quelle date commence la période de référence pour le droit au congé annuel ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:77",
+      "expect_refuse": false,
+      "answer": "La date de départ de la période prise en considération pour l'appréciation du droit au congé est fixée au 1er janvier de chaque année.",
+      "confidence": "high",
+      "latency_ms": 5974,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.665
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.6362
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 78,
+          "score": 0.5544
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 83,
+          "score": 0.5391
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 81,
+          "score": 0.5089
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7177,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q007",
+      "question": "Quelle est la durée maximale du travail effectif par semaine selon l'article 79 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:58",
+      "expect_refuse": false,
+      "answer": "La durée du travail effectif ne peut excéder 48 heures par semaine.",
+      "confidence": "high",
+      "latency_ms": 8067,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 58,
+          "score": 0.7294
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 59,
+          "score": 0.5858
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 62,
+          "score": 0.5193
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 60,
+          "score": 0.5066
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5063
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6997,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q008",
+      "question": "La durée hebdomadaire du travail peut-elle être réduite en dessous de 40 heures ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:58",
+      "expect_refuse": false,
+      "answer": "Je n'ai pas assez de contexte dans les documents indexés pour répondre de façon fiable.",
+      "confidence": "low",
+      "latency_ms": 9702,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 58,
+          "score": 0.6967
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 59,
+          "score": 0.5784
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 64,
+          "score": 0.5473
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 62,
+          "score": 0.5456
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.51
+        }
+      ],
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q009",
+      "question": "Quelle est la durée légale annuelle du travail dans les entreprises agricoles ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:62",
+      "expect_refuse": false,
+      "answer": "Dans les entreprises agricoles, la durée légale du travail est fixée à deux mille sept cents heures par an au maximum pour trois cents jours de travail effectif.",
+      "confidence": "high",
+      "latency_ms": 9314,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 62,
+          "score": 0.7286
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.5419
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 56,
+          "score": 0.5335
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 58,
+          "score": 0.5309
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 73,
+          "score": 0.5194
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7689,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q010",
+      "question": "Quel est le taux de majoration des heures supplémentaires pour un régime de 48 heures par semaine ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:63",
+      "expect_refuse": false,
+      "answer": "Pour un régime de travail à plein temps de 48 heures par semaine, le taux de majoration des heures supplémentaires est de 75%.",
+      "confidence": "high",
+      "latency_ms": 8014,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 63,
+          "score": 0.7292
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.713
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.713
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.7023
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.5029
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8032,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q011",
+      "question": "Comment sont majorées les heures supplémentaires si le régime plein temps est inférieur à 48 heures par semaine ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:63",
+      "expect_refuse": false,
+      "answer": "Pour les régimes de travail à plein temps inférieurs à 48 heures par semaine, les heures supplémentaires sont majorées de 25% jusqu'à 48 heures et de 50% au-delà de cette durée.",
+      "confidence": "high",
+      "latency_ms": 8337,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 63,
+          "score": 0.7304
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.6812
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.6812
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.6377
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 66,
+          "score": 0.5057
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8014,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q012",
+      "question": "Dans quels cas un contrat à durée déterminée peut-il être conclu selon l'article 6-4 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:16",
+      "expect_refuse": false,
+      "answer": "Un contrat de travail à durée déterminée peut être conclu dans les cas suivants :\n*   L'accomplissement de travaux de premier établissement ou de travaux neufs.\n*   L'accomplissement de travaux nécessités par un surcroît extraordinaire de travail.\n*   Le remplacement provisoire d'un travailleur permanent absent ou dont le contrat de travail est suspendu.\n*   L'accomplissement de travaux urgents pour prévenir des accidents imminents, effectuer des opérations de sauvetage ou pour réparer des défectuosités dans le matériel, les équipements ou les bâtiments de l'entreprise.\n*   L'exécution de travaux saisonniers ou d'autres activités pour lesquelles ne peut être fait recours, selon l'usage ou de par leur nature, au contrat à durée indéterminée.\n\nIl peut également être conclu, dans d'autres cas, sur accord entre l'employeur et le travailleur, à condition que sa durée n'excède pas quatre ans, renouvellements compris. Dans ce cas, le contrat doit être écrit en deux exemplaires.",
+      "confidence": "high",
+      "latency_ms": 8750,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 16,
+          "score": 0.7307
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 15,
+          "score": 0.6694
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 32,
+          "score": 0.5562
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 65,
+          "score": 0.5133
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 19,
+          "score": 0.5102
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6507,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q013",
+      "question": "Quelle est la durée maximale d'un CDD conclu par accord hors des cas énumérés à l'article 6-4 paragraphe 1 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:16",
+      "expect_refuse": false,
+      "answer": "La durée maximale d'un contrat de travail à durée déterminée (CDD) conclu par accord entre l'employeur et le travailleur, dans des cas autres que ceux indiqués au paragraphe 1 de l'article 6-4, ne peut excéder quatre ans, renouvellements compris.",
+      "confidence": "high",
+      "latency_ms": 7993,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 16,
+          "score": 0.513
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 3,
+          "score": 0.5016
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5009
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 58,
+          "score": 0.5003
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5002
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7761,
+      "context_precision": 1.0,
+      "context_recall": 0.9,
+      "refuse_correct": null
+    },
+    {
+      "id": "q014",
+      "question": "Comment le contrat de travail est-il défini à l'article 6 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:15",
+      "expect_refuse": false,
+      "answer": "Le contrat de travail est une convention par laquelle l'une des parties, appelée travailleur ou salarié, s'engage à fournir à l'autre partie, appelée employeur, ses services personnels sous la direction et le contrôle de celle-ci moyennant une rémunération. La relation de travail est prouvée par tous moyens.",
+      "confidence": "high",
+      "latency_ms": 6724,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 15,
+          "score": 0.671
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 16,
+          "score": 0.5039
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 23,
+          "score": 0.5026
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 19,
+          "score": 0.5019
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 36,
+          "score": 0.5006
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6435,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q015",
+      "question": "Comment prend fin un contrat à durée déterminée selon l'article 14 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:19",
+      "expect_refuse": false,
+      "answer": "Un contrat à durée déterminée prend fin par l'expiration de la durée convenue ou par l'accomplissement du travail objet du contrat. Il peut également prendre fin par l'accord des parties ou par la volonté de l'une des parties suite à une faute grave commise par l'autre partie.",
+      "confidence": "high",
+      "latency_ms": 9085,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 19,
+          "score": 0.721
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 23,
+          "score": 0.5224
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 15,
+          "score": 0.513
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 16,
+          "score": 0.5066
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 20,
+          "score": 0.5019
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6635,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q016",
+      "question": "Comment prend fin un contrat à durée indéterminée selon l'article 14 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:19",
+      "expect_refuse": false,
+      "answer": "Un contrat à durée indéterminée prend fin par l'expiration du délai de préavis. Il peut également prendre fin par l'accord des parties, par la volonté de l'une des parties suite à une faute grave commise par l'autre partie, en cas d'empêchement d'exécution résultant d'un cas fortuit ou de force majeure survenu avant ou pendant l'exécution du contrat, ou du décès du travailleur, par la résolution prononcée par le juge dans les cas déterminés par la loi, ou dans les autres cas prévus par la loi.",
+      "confidence": "high",
+      "latency_ms": 7762,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 19,
+          "score": 0.7206
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 23,
+          "score": 0.5426
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 20,
+          "score": 0.513
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 201,
+          "score": 0.512
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 203,
+          "score": 0.5104
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6647,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q017",
+      "question": "Que se passe-t-il si, à l'expiration du terme, le salarié continue à rendre ses services sans opposition ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:23",
+      "expect_refuse": false,
+      "answer": "Lorsqu’à l’expiration du terme établi, le salarié continue à rendre ses services sans opposition de l’autre partie, le contrat se transforme en un contrat à durée indéterminée.",
+      "confidence": "high",
+      "latency_ms": 7691,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 23,
+          "score": 0.731
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 33,
+          "score": 0.5064
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 32,
+          "score": 0.5016
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 181,
+          "score": 0.5007
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 30,
+          "score": 0.5006
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7551,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q018",
+      "question": "Une femme enceinte peut-elle quitter le travail sans préavis ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:23",
+      "expect_refuse": false,
+      "answer": "Oui, les femmes en état de grossesse peuvent quitter le travail sans délai-congé et sans avoir à payer une indemnité de rupture.",
+      "confidence": "high",
+      "latency_ms": 9028,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 23,
+          "score": 0.6437
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5145
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 181,
+          "score": 0.5065
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 54,
+          "score": 0.5046
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 49,
+          "score": 0.5041
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7154,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q019",
+      "question": "Quel est l'âge minimum d'admission au travail selon l'article 53 ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:43",
+      "expect_refuse": false,
+      "answer": "L'âge minimum d'admission au travail est de 16 ans, sous réserve des dispositions spéciales prévues par le code.",
+      "confidence": "high",
+      "latency_ms": 7016,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 43,
+          "score": 0.7301
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 46,
+          "score": 0.5881
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 44,
+          "score": 0.5417
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 217,
+          "score": 0.5144
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 45,
+          "score": 0.5057
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6595,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q020",
+      "question": "Quel congé de repos l'article 64 accorde-t-il à la femme à l'occasion de son accouchement ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:49",
+      "expect_refuse": false,
+      "answer": "À l'occasion de son accouchement, sur production d'un certificat médical, la femme aura droit à un congé de repos de 30 jours. Ce congé peut être prorogé, chaque fois, d'une période de 15 jours, sur justification de certificats médicaux.",
+      "confidence": "high",
+      "latency_ms": 8926,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 49,
+          "score": 0.726
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5175
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5125
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5116
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5095
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6355,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q021",
+      "question": "Quels repos d'allaitement l'article 64 prévoit-il ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:49",
+      "expect_refuse": false,
+      "answer": "L'article 64 prévoit que la femme a droit, si elle allaite son enfant et pendant une année à compter du jour de la naissance, à deux repos d'une demi-heure chacun durant les heures de travail pour lui permettre l'allaitement. Ces deux repos sont indépendants des repos prévus à l'article 89. L'un est fixé pendant le travail du matin, l'autre pendant l'après-midi. Ils peuvent être pris par les mères aux heures fixées d'un accord entre elles et les employeurs. À défaut d'accord, ces repos sont placés au milieu de chaque période. Ces repos sont considérés comme heures de travail et ouvrent droit à rémunération.",
+      "confidence": "high",
+      "latency_ms": 10191,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 49,
+          "score": 0.6445
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5212
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5102
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5089
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5009
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6884,
+      "context_precision": 1.0,
+      "context_recall": 0.8,
+      "refuse_correct": null
+    },
+    {
+      "id": "q022",
+      "question": "Quelle est la période de nuit interdite pour les enfants de moins de quatorze ans dans les activités non agricoles ?",
+      "language": "fr",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:50",
+      "expect_refuse": false,
+      "answer": "Les enfants de moins de quatorze ans ne doivent pas être employés la nuit pendant une période d’au moins quatorze heures consécutives qui doit comprendre l’intervalle s’étendant entre huit heures du soir et huit heures du matin. (1)",
+      "confidence": "high",
+      "latency_ms": 6922,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 50,
+          "score": 0.7307
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 55,
+          "score": 0.6962
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 51,
+          "score": 0.62
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 56,
+          "score": 0.5546
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 45,
+          "score": 0.5243
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6815,
+      "context_precision": 1.0,
+      "context_recall": 0.9,
+      "refuse_correct": null
+    },
+    {
+      "id": "q023",
+      "question": "À qui s'applique la loi 2024-44 sur les congés de maternité et de paternité ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:1",
+      "expect_refuse": false,
+      "answer": "La loi n° 2024-44 s'applique à tous les agents de la fonction publique et du secteur public affiliés à la Caisse nationale de retraite et de prévoyance sociale, ainsi qu'aux salariés et non-salariés du secteur privé affiliés et déclarés à la Caisse nationale de sécurité sociale.",
+      "confidence": "high",
+      "latency_ms": 7950,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.731
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5635
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5032
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5027
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5013
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6294,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q024",
+      "question": "Quelle est la durée maximale du congé prénatal selon la loi 2024-44 ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:1",
+      "expect_refuse": false,
+      "answer": "La durée maximale du congé prénatal est de quinze (15) jours au cours du dernier mois de la grossesse [1].",
+      "confidence": "high",
+      "latency_ms": 6818,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.7308
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5948
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5213
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5131
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5067
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6417,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q025",
+      "question": "Quelle est la durée du congé postnatal selon l'article 4 de la loi 2024-44 ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:1",
+      "expect_refuse": false,
+      "answer": "La mère bénéficie d'un congé postnatal de trois (3) mois. Ce congé est obligatoirement porté à quatre (4) mois en cas de naissances gémellaires ou multiples, ou si l'enfant est porteur d'un handicap, prématuré ou présente des malformations congénitales nécessitant des interventions et soins médicaux. En cas d'accouchement d'un enfant mort-né, la mère bénéficie d'un congé postnatal d'un mois.",
+      "confidence": "high",
+      "latency_ms": 9460,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.7304
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.6882
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.6414
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5352
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.5052
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.5668,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q026",
+      "question": "Quelle est la durée du congé de paternité selon l'article 5 de la loi 2024-44 ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:2",
+      "expect_refuse": false,
+      "answer": "Selon l'article 5 de la loi n° 2024-44, le père bénéficie d'un congé de paternité de sept (7) jours à plein traitement. Ce congé est porté à dix (10) jours en cas de naissances gémellaires ou multiples, ou si l'enfant est porteur d'un handicap, prématuré ou présente des malformations congénitales nécessitant des interventions et soins médicaux, sur la base d'un rapport médical.\n\nLe père bénéficie également d'un congé de trois (3) jours à plein traitement si la mère donne naissance à un enfant mort-né.\n\nLe congé de paternité doit être pris dans les trente (30) jours suivant la date de l'accouchement.",
+      "confidence": "high",
+      "latency_ms": 9272,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.7282
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.7004
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5354
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5042
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5035
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6455,
+      "context_precision": 0.5,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q027",
+      "question": "Dans quel délai le congé de paternité doit-il être pris ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:2",
+      "expect_refuse": false,
+      "answer": "Le congé de paternité doit être pris dans les trente (30) jours à compter de la date de l’accouchement.",
+      "confidence": "high",
+      "latency_ms": 7334,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.6651
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5942
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 77,
+          "score": 0.5189
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5183
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.5177
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8053,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q028",
+      "question": "Le père a-t-il un congé si l'enfant est mort-né ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:2",
+      "expect_refuse": false,
+      "answer": "Oui, le père bénéficie d'un congé de trois (3) jours à plein traitement en cas de naissance d'un enfant mort-né, sur production des pièces justificatives.",
+      "confidence": "high",
+      "latency_ms": 8775,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.727
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.6447
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5278
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 49,
+          "score": 0.5001
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5001
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7582,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q029",
+      "question": "Quel congé d'accouchement la mère peut-elle demander après le congé postnatal ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:2",
+      "expect_refuse": false,
+      "answer": "La mère peut bénéficier, immédiatement après le congé postnatal, d'un congé d’accouchement dont la durée varie d’un mois à quatre (4) mois, à demi-traitement pour les agents de la fonction publique et du secteur public, et à une indemnité au titre de congé d’accouchement pour le secteur privé. Cette demande est soumise à l'approbation du chef de l’administration ou de l’employeur et doit être présentée au moins quinze (15) jours avant la fin du congé postnatal.",
+      "confidence": "high",
+      "latency_ms": 6231,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.7293
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.7211
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.7061
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.6537
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 49,
+          "score": 0.5129
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7501,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q030",
+      "question": "Peut-on licencier une femme en raison de sa grossesse selon la loi 2024-44 ?",
+      "language": "fr",
+      "source_hint": "04_loi_2024-44_conges_maternite_paternite.pdf:2",
+      "expect_refuse": false,
+      "answer": "Non, il est interdit d'infliger des sanctions ou de licencier toute femme durant sa grossesse ou pendant le bénéfice des congés prévus par la loi 2024-44, pour des raisons liées à la grossesse ou à l’accouchement ou à l’allaitement.",
+      "confidence": "high",
+      "latency_ms": 7237,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.7014
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.5778
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 24,
+          "score": 0.5018
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 23,
+          "score": 0.5008
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 182,
+          "score": 0.5001
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7874,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q031",
+      "question": "Quel est le SMIG mensuel au 1er mai 2024 pour un régime de 48 heures par semaine ?",
+      "language": "fr",
+      "source_hint": "14_decret_2024-419_smig.pdf:2",
+      "expect_refuse": false,
+      "answer": "Pour les salariés payés au mois et travaillant 48 heures par semaine, le SMIG mensuel à compter du 1er mai 2024 est de 491.504 dinars.",
+      "confidence": "high",
+      "latency_ms": 6823,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.7298
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.7298
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.533
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 2,
+          "score": 0.5014
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5008
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.77,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q032",
+      "question": "Quel est le SMIG mensuel au 1er mai 2024 pour un régime de 40 heures par semaine ?",
+      "language": "fr",
+      "source_hint": "14_decret_2024-419_smig.pdf:2",
+      "expect_refuse": false,
+      "answer": "À compter du 1er mai 2024, pour les salariés payés au mois et travaillant 40 heures par semaine, le SMIG est de 417,558 dinars.",
+      "confidence": "high",
+      "latency_ms": 7412,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.7284
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.7284
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.518
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 2,
+          "score": 0.501
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5007
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7659,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q033",
+      "question": "Dans le télétravail partiel de la fonction publique, combien de jours de présence minimale sont exigés ?",
+      "language": "fr",
+      "source_hint": "07_decret_2022-310_teletravail.pdf:5",
+      "expect_refuse": false,
+      "answer": "Dans le régime partiel du télétravail régulier, l'agent doit être présent au moins un jour par semaine ou quatre jours par mois sur le lieu de travail d'origine.",
+      "confidence": "high",
+      "latency_ms": 8225,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5631
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5196
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 8,
+          "score": 0.515
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5134
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 4,
+          "score": 0.505
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6777,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q034",
+      "question": "Une femme enceinte agent public peut-elle télétravailler selon le décret 2022-310 ?",
+      "language": "fr",
+      "source_hint": "07_decret_2022-310_teletravail.pdf:5",
+      "expect_refuse": false,
+      "answer": "Oui, une femme enceinte agent public peut télétravailler si son état de santé nécessite d'éviter les déplacements récurrents de longs trajets, tout en étant capable de travailler à distance. Cette demande doit être basée sur un rapport médical émanant d’un médecin spécialiste relevant d’un établissement de santé public ou privé. Elle doit présenter les justifications nécessaires et les annexer à sa demande d'autorisation.",
+      "confidence": "high",
+      "latency_ms": 7599,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.6988
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 8,
+          "score": 0.5038
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 7,
+          "score": 0.5032
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 4,
+          "score": 0.5026
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 5,
+          "score": 0.5025
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.748,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q035",
+      "question": "Qui est auto-entrepreneur selon le décret-loi 2020-33 ?",
+      "language": "fr",
+      "source_hint": "11_decret_loi_2020-33_auto_entrepreneur.pdf:2",
+      "expect_refuse": false,
+      "answer": "Selon l'article 2 du décret-loi 2020-33, un auto-entrepreneur est toute personne physique de nationalité tunisienne exerçant individuellement une activité dans les secteurs de l'industrie, de l'agriculture, du commerce, des services, de l'artisanat ou des métiers, à condition que son chiffre d'affaires annuel ne dépasse pas 75 mille dinars.\n\nSont exclues de ce régime les personnes ayant déjà déposé la déclaration d'existence prévue par l'article 56 du code de l'impôt sur le revenu des personnes physiques et de l'impôt sur les sociétés, et ce, à compter de la date de publication du décret-loi.",
+      "confidence": "high",
+      "latency_ms": 7833,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 2,
+          "score": 0.5026
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 2,
+          "score": 0.5021
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 3,
+          "score": 0.5008
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 3,
+          "score": 0.5005
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 4,
+          "score": 0.5004
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6806,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q036",
+      "question": "Quelle est la part d'impôt sur le revenu dans la contribution unique de l'auto-entrepreneur ?",
+      "language": "fr",
+      "source_hint": "11_decret_loi_2020-33_auto_entrepreneur.pdf:3",
+      "expect_refuse": false,
+      "answer": "La part d'impôt sur le revenu dans la contribution unique de l'auto-entrepreneur est de 0,5% du chiffre d'affaires annuel.",
+      "confidence": "high",
+      "latency_ms": 7732,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 3,
+          "score": 0.7204
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 3,
+          "score": 0.6858
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 4,
+          "score": 0.5429
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 2,
+          "score": 0.5135
+        },
+        {
+          "filename": "11_decret_loi_2020-33_auto_entrepreneur.pdf",
+          "page": 2,
+          "score": 0.5094
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8308,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q037",
+      "question": "Quelle indemnité horaire de travail de nuit est prévue pour les personnels de l'État entre 21 heures et 6 heures ?",
+      "language": "fr",
+      "source_hint": "08_decret_2019_indemnite_travail_nuit.pdf:2",
+      "expect_refuse": false,
+      "answer": "Une indemnité horaire de travail de nuit de deux cents (200) millimes est prévue pour les personnels de l'État, des collectivités locales et des établissements publics à caractère administratif qui assurent un service de nuit entre vingt et une heures (21) et six heures (6). Ce taux horaire est majoré de trois cents (300) millimes pour les agents publics affectés aux postes situés le long des frontières libyenne et algérienne, à l'exclusion des chefs-lieux des gouvernorats.",
+      "confidence": "high",
+      "latency_ms": 6049,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "08_decret_2019_indemnite_travail_nuit.pdf",
+          "page": 2,
+          "score": 0.7138
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 50,
+          "score": 0.5139
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 52,
+          "score": 0.5017
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 51,
+          "score": 0.5015
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 63,
+          "score": 0.501
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7276,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q038",
+      "question": "Comment cette indemnité de nuit est-elle majorée aux frontières libyenne et algérienne ?",
+      "language": "fr",
+      "source_hint": "08_decret_2019_indemnite_travail_nuit.pdf:2",
+      "expect_refuse": false,
+      "answer": "Le taux horaire de l'indemnité de travail de nuit est majoré de trois cents (300) millimes pour les agents publics affectés aux postes situés le long des frontières libyenne et algérienne, à l'exclusion des chefs-lieux des gouvernorats.",
+      "confidence": "high",
+      "latency_ms": 5837,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "08_decret_2019_indemnite_travail_nuit.pdf",
+          "page": 2,
+          "score": 0.6922
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 52,
+          "score": 0.5004
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 51,
+          "score": 0.5003
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 79,
+          "score": 0.5001
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 66,
+          "score": 0.5
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7316,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q039",
+      "question": "Qui signe le contrat de travail d'un travailleur étranger et où est-il déposé ?",
+      "language": "fr",
+      "source_hint": "05_arrete_2020_contrat_travailleur_etranger.pdf:2",
+      "expect_refuse": false,
+      "answer": "Le contrat de travail d'un travailleur étranger est signé par l'employeur et le travailleur étranger. Il est déposé au ministère chargé de l'emploi par l'employeur, par voie électronique via l'application informatique élaborée à cet effet.",
+      "confidence": "high",
+      "latency_ms": 7517,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "05_arrete_2020_contrat_travailleur_etranger.pdf",
+          "page": 2,
+          "score": 0.668
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 145,
+          "score": 0.5132
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 144,
+          "score": 0.5078
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 17,
+          "score": 0.5063
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 146,
+          "score": 0.5032
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7659,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q040",
+      "question": "Quel est le taux de prise en charge CNAM des consultations de médecins dans la filière privée de soins ?",
+      "language": "fr",
+      "source_hint": "12_decret_2021-318_cnam_prestations.pdf:2",
+      "expect_refuse": false,
+      "answer": "Le taux de prise en charge des consultations de médecins dans le cadre de la filière privée de soins est de 70%.",
+      "confidence": "high",
+      "latency_ms": 6254,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 2,
+          "score": 0.558
+        },
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 2,
+          "score": 0.5005
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 2,
+          "score": 0.5003
+        },
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 1,
+          "score": 0.5003
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5001
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7331,
+      "context_precision": 0.75,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q041",
+      "question": "Quel est le taux de prise en charge CNAM des médicaments vitaux ?",
+      "language": "fr",
+      "source_hint": "12_decret_2021-318_cnam_prestations.pdf:2",
+      "expect_refuse": false,
+      "answer": "Les taux de prise en charge des frais des prestations de soins ambulatoires dispensées dans le cadre de la filière privée de soins pour les médicaments vitaux sont de 100%. Les taux de remboursement de frais de soins dans le cadre du système de remboursement pour les médicaments vitaux sont également de 100%.",
+      "confidence": "high",
+      "latency_ms": 8107,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 2,
+          "score": 0.503
+        },
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 2,
+          "score": 0.5003
+        },
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 1,
+          "score": 0.5002
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 1,
+          "score": 0.5001
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 2,
+          "score": 0.5
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.5383,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q042",
+      "question": "Quel est le montant mensuel de l'indemnité d'inspection et de conciliation pour un inspecteur général du travail ?",
+      "language": "fr",
+      "source_hint": "06_decret_2010-2770_inspection_travail.pdf:2",
+      "expect_refuse": false,
+      "answer": "Le montant mensuel de l'indemnité d'inspection et de conciliation pour un inspecteur général du travail et de conciliation est de 502 dinars.",
+      "confidence": "high",
+      "latency_ms": 7765,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "06_decret_2010-2770_inspection_travail.pdf",
+          "page": 2,
+          "score": 0.7139
+        },
+        {
+          "filename": "06_decret_2010-2770_inspection_travail.pdf",
+          "page": 1,
+          "score": 0.5038
+        },
+        {
+          "filename": "06_decret_2010-2770_inspection_travail.pdf",
+          "page": 1,
+          "score": 0.5034
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 135,
+          "score": 0.5012
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 185,
+          "score": 0.501
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7996,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q043",
+      "question": "Dans quels secteurs le décret 2023-161 majore-t-il les salaires de base ?",
+      "language": "fr",
+      "source_hint": "02_decret_2023-161_majoration_salaires.pdf:2",
+      "expect_refuse": false,
+      "answer": "Le décret 2023-161 majore les salaires de base dans les secteurs non agricoles régis par le code du travail et non couverts par des conventions collectives sectorielles ou par des statuts particuliers (passage 1).",
+      "confidence": "high",
+      "latency_ms": 6464,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 1,
+          "score": 0.7252
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.5619
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.5188
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5188
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 2,
+          "score": 0.5099
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8118,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q044",
+      "question": "Quel est l'objet de la loi n° 2008-10 ?",
+      "language": "fr",
+      "source_hint": "10_loi_2008-10_formation_professionnelle.pdf:1",
+      "expect_refuse": false,
+      "answer": "La loi n° 2008-10 du 11 février 2008 est relative à la formation professionnelle.",
+      "confidence": "high",
+      "latency_ms": 8623,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "10_loi_2008-10_formation_professionnelle.pdf",
+          "page": 1,
+          "score": 0.7046
+        },
+        {
+          "filename": "09_decret_2019-802_atfp.pdf",
+          "page": 1,
+          "score": 0.5001
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 2,
+          "score": 0.5
+        },
+        {
+          "filename": "07_decret_2022-310_teletravail.pdf",
+          "page": 3,
+          "score": 0.5
+        },
+        {
+          "filename": "06_decret_2010-2770_inspection_travail.pdf",
+          "page": 1,
+          "score": 0.5
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6697,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q045",
+      "question": "Quelles pièces sont exigées dans tous les cas pour une demande d'affiliation CNSS des non-salariés ?",
+      "language": "fr",
+      "source_hint": "13_cnss_demande_affiliation_non_salaries.pdf:1",
+      "expect_refuse": false,
+      "answer": "Dans tous les cas, les pièces exigées pour une demande d'affiliation au régime de sécurité sociale des travailleurs non salariés sont les suivantes [1] :\n- Un extrait d'acte de naissance datant de moins de 3 mois.\n- Une copie de la Carte d'Identité Nationale.",
+      "confidence": "high",
+      "latency_ms": 8681,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "13_cnss_demande_affiliation_non_salaries.pdf",
+          "page": 1,
+          "score": 0.6046
+        },
+        {
+          "filename": "13_cnss_demande_affiliation_non_salaries.pdf",
+          "page": 3,
+          "score": 0.5395
+        },
+        {
+          "filename": "13_cnss_demande_affiliation_non_salaries.pdf",
+          "page": 1,
+          "score": 0.5224
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 81,
+          "score": 0.5017
+        },
+        {
+          "filename": "13_cnss_demande_affiliation_non_salaries.pdf",
+          "page": 1,
+          "score": 0.5015
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7265,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q046",
+      "question": "What is the maximum legal weekly working time under article 79 of the Tunisian labour code?",
+      "language": "en",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:58",
+      "expect_refuse": false,
+      "answer": "The maximum legal weekly working time under Article 79 of the Tunisian labour code is 48 hours per week. This duration can be reduced but not below 40 hours per week.",
+      "confidence": "high",
+      "latency_ms": 8003,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 59,
+          "score": 0.7235
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 58,
+          "score": 0.7135
+        },
+        {
+          "filename": "04_loi_2024-44_conges_maternite_paternite.pdf",
+          "page": 2,
+          "score": 0.7123
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 218,
+          "score": 0.6445
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5818
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8347,
+      "context_precision": 0.5,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q047",
+      "question": "ما هي مدة العطلة السنوية المدفوعة الأجر حسب الفصل 113 من مجلة الشغل؟",
+      "language": "ar",
+      "source_hint": "01_code_du_travail_2011_ilo.pdf:76",
+      "expect_refuse": false,
+      "answer": "تُحدد مدة العطلة بيوم واحد عن كل شهر عمل، على ألا تتجاوز المدة الإجمالية للعطلة خمسة عشر يومًا تتضمن اثني عشر يوم عمل.\n\nبالنسبة للعمال الذين تقل أعمارهم عن ثمانية عشر عامًا في 31 ديسمبر من كل عام، ترفع مدة العطلة إلى يومين عن كل شهر عمل، على ألا تتجاوز المدة الإجمالية للعطلة ثلاثين يومًا تتضمن أربعة وعشرين يوم عمل.\n\nأما بالنسبة للعمال الذين تتراوح أعمارهم بين ثمانية عشر وعشرين عامًا في 31 ديسمبر من كل عام، ترفع مدة العطلة إلى يوم ونصف عن كل شهر عمل، على ألا تتجاوز المدة الإجمالية للعطلة اثنين وعشرين يومًا تتضمن ثمانية عشر يوم عمل.",
+      "confidence": "high",
+      "latency_ms": 7307,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 76,
+          "score": 0.5096
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 82,
+          "score": 0.5004
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 83,
+          "score": 0.5004
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 78,
+          "score": 0.5003
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 84,
+          "score": 0.5003
+        }
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.5798,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "refuse_correct": null
+    },
+    {
+      "id": "q048",
+      "question": "What is the capital of Australia?",
+      "language": "en",
+      "source_hint": "",
+      "expect_refuse": true,
+      "answer": "I don't have enough confidence to answer from the indexed documents.",
+      "confidence": "low",
+      "latency_ms": 8410,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "05_arrete_2020_contrat_travailleur_etranger.pdf",
+          "page": 1,
+          "score": 0.5006
+        },
+        {
+          "filename": "12_decret_2021-318_cnam_prestations.pdf",
+          "page": 2,
+          "score": 0.5002
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 1,
+          "score": 0.5
+        },
+        {
+          "filename": "02_decret_2023-161_majoration_salaires.pdf",
+          "page": 1,
+          "score": 0.5
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 2,
+          "score": 0.5
+        }
+      ],
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "refuse_correct": true
+    },
+    {
+      "id": "q049",
+      "question": "Quelle est la recette traditionnelle du couscous tunisien ?",
+      "language": "fr",
+      "source_hint": "",
+      "expect_refuse": true,
+      "answer": "Je n'ai pas assez de contexte dans les documents indexés pour répondre de façon fiable.",
+      "confidence": "low",
+      "latency_ms": 6152,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 218,
+          "score": 0.5001
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 147,
+          "score": 0.5001
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 220,
+          "score": 0.5001
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 211,
+          "score": 0.5
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 3,
+          "score": 0.5
+        }
+      ],
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "refuse_correct": true
+    },
+    {
+      "id": "q050",
+      "question": "Que dit la loi 2025-9 sur l'interdiction de la sous-traitance de main-d'œuvre ?",
+      "language": "fr",
+      "source_hint": "",
+      "expect_refuse": true,
+      "answer": "Je n'ai pas assez de contexte dans les documents indexés pour répondre de façon fiable.",
+      "confidence": "low",
+      "latency_ms": 6655,
+      "n_context": 5,
+      "citations": [
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 2,
+          "score": 0.5026
+        },
+        {
+          "filename": "14_decret_2024-419_smig.pdf",
+          "page": 2,
+          "score": 0.5007
+        },
+        {
+          "filename": "03_decret_2024-420_smag.pdf",
+          "page": 1,
+          "score": 0.5007
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 35,
+          "score": 0.5006
+        },
+        {
+          "filename": "01_code_du_travail_2011_ilo.pdf",
+          "page": 32,
+          "score": 0.5004
+        }
+      ],
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "refuse_correct": true
+    }
+  ]
+}

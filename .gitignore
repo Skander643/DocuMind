@@ -19,18 +19,17 @@ build/
 frontend/node_modules/
 frontend/dist/
 
-# Data (PDFs and vector store are local)
-data/raw/*.pdf
-data/chroma/
-data/processed/
+# Eval traces (keep latest.json for the sidebar)
 eval/results/*.csv
 eval/results/*.json
+!eval/results/latest.json
 
-# Models / caches
+# Models / caches (Chroma HNSW graphs must stay trackable)
 .cache/
-*.bin
 *.pt
 *.onnx
+*.bin
+!data/chroma/**/*.bin
 
 # OS / IDE
 .DS_Store
@@ -41,6 +40,7 @@ Thumbs.db
 # Logs
 *.log
 
-# Vercel
+# Vercel / Railway / Fly local metadata
 .vercel
 frontend/.vercel
+.railway

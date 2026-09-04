@@ -2,8 +2,7 @@
 **/node_modules
 **/__pycache__
 **/.pytest_cache
-data/chroma
-data/raw/*.pdf
 frontend/dist
 .env
 .git
+eval/results/*.csv

@@ -37,7 +37,12 @@ class Settings(BaseSettings):
 
     api_key: str = ""
     rate_limit_per_minute: int = 20
-    cors_origins: str = "http://127.0.0.1:5173,http://localhost:5173"
+    cors_origins: str = (
+        "http://127.0.0.1:5173,http://localhost:5173,"
+        "https://documind-orpin.vercel.app,"
+        "https://documind-skander643s-projects.vercel.app"
+    )
+    cors_origin_regex: str = r"https://documind.*\.vercel\.app"
 
 
 settings = Settings()

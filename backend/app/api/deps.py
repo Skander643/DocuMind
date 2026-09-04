@@ -26,6 +26,16 @@ def require_api_key(request: Request) -> None:
         raise HTTPException(status_code=401, detail="Invalid or missing API key.")
 
 
+def require_write_access(request: Request) -> None:
+    """Block corpus mutations on the public demo when no API_KEY is configured."""
+    if settings.app_env == "prod" and not settings.api_key:
+        raise HTTPException(
+            status_code=401,
+            detail="Document writes are disabled on the public demo.",
+        )
+    require_api_key(request)
+
+
 def rate_limit_chat(request: Request) -> None:
     limit = settings.rate_limit_per_minute
     if limit <= 0:

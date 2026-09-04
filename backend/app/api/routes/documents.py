@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, File, HTTPException, Response, UploadFile
 from fastapi.responses import FileResponse
 
-from app.api.deps import require_api_key
+from app.api.deps import require_write_access
 from app.ingest.catalog import (
     delete_indexed_document,
     find_pdf_by_doc_id,
@@ -22,7 +22,7 @@ def list_documents() -> list[DocumentInfo]:
 @router.post("/documents", response_model=list[DocumentInfo], status_code=201)
 async def upload_documents(
     files: list[UploadFile] = File(...),
-    _: None = Depends(require_api_key),
+    _: None = Depends(require_write_access),
 ) -> list[DocumentInfo]:
     if not files:
         raise HTTPException(status_code=400, detail="No files uploaded.")
@@ -41,7 +41,7 @@ async def upload_documents(
 
 
 @router.delete("/documents/{doc_id}", status_code=204)
-def delete_document(doc_id: str, _: None = Depends(require_api_key)) -> Response:
+def delete_document(doc_id: str, _: None = Depends(require_write_access)) -> Response:
     try:
         delete_indexed_document(doc_id)
     except FileNotFoundError as exc:
@@ -50,7 +50,7 @@ def delete_document(doc_id: str, _: None = Depends(require_api_key)) -> Response
 
 
 @router.post("/documents/{doc_id}/reindex", response_model=DocumentInfo)
-def reindex_document(doc_id: str, _: None = Depends(require_api_key)) -> DocumentInfo:
+def reindex_document(doc_id: str, _: None = Depends(require_write_access)) -> DocumentInfo:
     path = find_pdf_by_doc_id(doc_id)
     if path is None or not path.is_file():
         raise HTTPException(status_code=404, detail="Document PDF not found on disk.")

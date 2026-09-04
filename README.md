@@ -145,8 +145,9 @@ python -m app.eval --limit 3       # smoke
 
 - **GitHub:** [https://github.com/Skander643/DocuMind](https://github.com/Skander643/DocuMind)
 - **Vercel UI:** [https://documind-orpin.vercel.app](https://documind-orpin.vercel.app)
+- **API:** Fly.io (`documind-skander`) — set `VITE_API_URL` on Vercel to that origin.
 
-Vercel hosts the React UI only (`frontend/`, Root Directory `frontend`). The RAG API (PyTorch, BGE-M3, Chroma) does **not** fit Vercel serverless — use Docker Compose for a working chat demo. Chat on the live UI stays local until the API has a public URL (`VITE_API_URL`).
+Vercel hosts the React UI (`frontend/`). The RAG API (PyTorch, BGE-M3, Chroma) runs as a 4 GB Fly machine with a volume for the Hugging Face cache. Public chat is rate-limited; document upload/delete is disabled unless `API_KEY` is set. Local Docker Compose remains the full laptop demo.
 
 ## Working with Cursor
 

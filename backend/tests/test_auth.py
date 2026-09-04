@@ -60,6 +60,19 @@ def test_document_write_requires_api_key(monkeypatch) -> None:
     assert listed.status_code == 200
 
 
+def test_document_writes_disabled_on_public_prod(monkeypatch) -> None:
+    monkeypatch.setattr("app.api.deps.settings.api_key", "")
+    monkeypatch.setattr("app.api.deps.settings.app_env", "prod")
+    denied = client.post(
+        "/api/documents",
+        files=[("files", ("loi.pdf", b"%PDF-1.4", "application/pdf"))],
+    )
+    assert denied.status_code == 401
+    listed = client.get("/api/documents")
+    assert listed.status_code == 200
+
+
+
 def test_chat_rate_limit(monkeypatch) -> None:
     monkeypatch.setattr("app.api.deps.settings.api_key", "")
     monkeypatch.setattr("app.api.deps.settings.rate_limit_per_minute", 2)
