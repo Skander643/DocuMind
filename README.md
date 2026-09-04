@@ -147,7 +147,7 @@ python -m app.eval --limit 3       # smoke
 - **Vercel UI:** [https://documind-orpin.vercel.app](https://documind-orpin.vercel.app)
 - **API:** [https://api-production-4d57.up.railway.app](https://api-production-4d57.up.railway.app) (Railway). `VITE_API_URL` on Vercel points here.
 
-Vercel hosts the React UI (`frontend/`). The RAG API (PyTorch, BGE-M3, Chroma) runs on Railway. Public chat is rate-limited; document upload/delete is disabled unless `API_KEY` is set. Local Docker Compose remains the full laptop demo. `fly.toml` is there if you switch hosts after adding a Fly.io payment method.
+Vercel hosts the React UI (`frontend/`). The RAG API (PyTorch, BGE-M3, Chroma) runs on Railway. In the Railway service **Settings → Deploy → Replica Limits**, set memory to **8 GB** (BGE-M3 will OOM at 512 MB). Public chat is rate-limited; document upload/delete is disabled unless `API_KEY` is set. Local Docker Compose remains the full laptop demo. `fly.toml` is there if you switch hosts after adding a Fly.io payment method.
 
 ## Working with Cursor
 

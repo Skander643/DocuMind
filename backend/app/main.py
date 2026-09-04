@@ -1,13 +1,8 @@
-import logging
-import threading
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import chat, documents, eval as eval_routes, health
 from app.config import settings
-
-logger = logging.getLogger(__name__)
 
 app = FastAPI(title=settings.app_name, version="0.1.0")
 
@@ -26,20 +21,3 @@ app.include_router(health.router)
 app.include_router(chat.router, prefix=settings.api_prefix)
 app.include_router(documents.router, prefix=settings.api_prefix)
 app.include_router(eval_routes.router, prefix=settings.api_prefix)
-
-
-def _warmup_models() -> None:
-    try:
-        from app.rag.embeddings import get_model
-        from app.rag.reranker import get_cross_encoder
-
-        get_model()
-        get_cross_encoder()
-        logger.info("embedding and reranker models ready")
-    except Exception:
-        logger.exception("model warmup failed")
-
-
-if settings.app_env == "prod":
-    threading.Thread(target=_warmup_models, daemon=True, name="model-warmup").start()
-
